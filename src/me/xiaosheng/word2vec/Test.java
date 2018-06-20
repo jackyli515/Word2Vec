@@ -13,7 +13,7 @@ public class Test {
     public static void main(String[] args) throws Exception {
         Word2Vec vec = new Word2Vec();
         try {
-            vec.loadGoogleModel("data/wiki_chinese_word2vec(Google).model");
+            vec.loadGoogleModel("E:\\nlp\\sogou2012_news\\sogou2012_corpus_vector.bin");
         } catch (IOException e) {
             e.printStackTrace();
         }

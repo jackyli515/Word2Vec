@@ -1,6 +1,7 @@
 package com.ansj.vec;
 
 import java.io.*;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -337,12 +338,12 @@ public class Word2VEC {
 			bytes[i] = b;
 			b = dis.readByte();
 			if (i == 49) {
-				sb.append(new String(bytes));
+				sb.append(new String(bytes, Charset.forName("UTF-8")));
 				i = -1;
 				bytes = new byte[MAX_SIZE];
 			}
 		}
-		sb.append(new String(bytes, 0, i + 1));
+		sb.append(new String(bytes, 0, i + 1,Charset.forName("UTF-8")));
 		return sb.toString();
 	}
 
